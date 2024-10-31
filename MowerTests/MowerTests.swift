@@ -6,11 +6,26 @@
 //
 
 import Testing
+@testable import Mower
+
+class MowerInteractorMock: MowerRepo {
+    
+    func connect() async -> Bool {
+        return true
+    }
+    
+    func operate(operation: Mower.Operation) async -> Bool {
+        return true
+    }
+}
 
 struct MowerTests {
-
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    
+    @Test("Test connectivity to mower") func example() async throws {
+        let mowerInteractor = MowerInteractorMock()
+        let mowerVM = MowerVM(mowerInteractor: mowerInteractor)
+        await mowerVM.connectToMower()
+        #expect(mowerVM.mowerStatus == .stopped)
     }
 
 }

@@ -6,6 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		49F894012CD273F40036DC1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F893F62CD273F40036DC1E /* Preview Assets.xcassets */; };
+		49F894022CD273F40036DC1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F893F82CD273F40036DC1E /* Assets.xcassets */; };
+		49F894042CD273F40036DC1E /* MowerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F893FB2CD273F40036DC1E /* MowerApp.swift */; };
+		49F894062CD273F40036DC1E /* MowerRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F893FD2CD273F40036DC1E /* MowerRepo.swift */; };
+		49F894072CD273F40036DC1E /* MowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F893FE2CD273F40036DC1E /* MowerView.swift */; };
+		49F894082CD273F40036DC1E /* MowerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F893FF2CD273F40036DC1E /* MowerVM.swift */; };
+		49F8940B2CD39A380036DC1E /* MowerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8940A2CD39A380036DC1E /* MowerInteractor.swift */; };
+		49F8940F2CD4116A0036DC1E /* MowerIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8940E2CD4116A0036DC1E /* MowerIntent.swift */; };
+		49F8944A2CD431C80036DC1E /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F894472CD431C80036DC1E /* IntentsUI.framework */; };
+		49F8944B2CD431C80036DC1E /* AppIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F894482CD431C80036DC1E /* AppIntents.framework */; };
+		49F8944C2CD431C80036DC1E /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F894492CD431C80036DC1E /* Intents.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		49F893CE2CD220650036DC1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,14 +41,22 @@
 		49F893BC2CD220640036DC1E /* Mower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F893CD2CD220650036DC1E /* MowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MowerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F893D72CD220650036DC1E /* MowerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MowerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F893F62CD273F40036DC1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		49F893F82CD273F40036DC1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49F893FA2CD273F40036DC1E /* Mower.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mower.entitlements; sourceTree = "<group>"; };
+		49F893FB2CD273F40036DC1E /* MowerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MowerApp.swift; sourceTree = "<group>"; };
+		49F893FD2CD273F40036DC1E /* MowerRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MowerRepo.swift; sourceTree = "<group>"; };
+		49F893FE2CD273F40036DC1E /* MowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MowerView.swift; sourceTree = "<group>"; };
+		49F893FF2CD273F40036DC1E /* MowerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MowerVM.swift; sourceTree = "<group>"; };
+		49F894092CD2765B0036DC1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		49F8940A2CD39A380036DC1E /* MowerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MowerInteractor.swift; sourceTree = "<group>"; };
+		49F8940E2CD4116A0036DC1E /* MowerIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MowerIntent.swift; sourceTree = "<group>"; };
+		49F894472CD431C80036DC1E /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/IntentsUI.framework; sourceTree = DEVELOPER_DIR; };
+		49F894482CD431C80036DC1E /* AppIntents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppIntents.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/AppIntents.framework; sourceTree = DEVELOPER_DIR; };
+		49F894492CD431C80036DC1E /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Intents.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		49F893BE2CD220640036DC1E /* Mower */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Mower;
-			sourceTree = "<group>";
-		};
 		49F893D02CD220650036DC1E /* MowerTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = MowerTests;
@@ -52,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F8944A2CD431C80036DC1E /* IntentsUI.framework in Frameworks */,
+				49F8944B2CD431C80036DC1E /* AppIntents.framework in Frameworks */,
+				49F8944C2CD431C80036DC1E /* Intents.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +100,10 @@
 		49F893B32CD220640036DC1E = {
 			isa = PBXGroup;
 			children = (
-				49F893BE2CD220640036DC1E /* Mower */,
+				49F894002CD273F40036DC1E /* Mower */,
 				49F893D02CD220650036DC1E /* MowerTests */,
 				49F893DA2CD220650036DC1E /* MowerUITests */,
+				49F894462CD431C80036DC1E /* Frameworks */,
 				49F893BD2CD220640036DC1E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +116,41 @@
 				49F893D72CD220650036DC1E /* MowerUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		49F893F72CD273F40036DC1E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				49F893F62CD273F40036DC1E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		49F894002CD273F40036DC1E /* Mower */ = {
+			isa = PBXGroup;
+			children = (
+				49F894092CD2765B0036DC1E /* Info.plist */,
+				49F893FB2CD273F40036DC1E /* MowerApp.swift */,
+				49F893FE2CD273F40036DC1E /* MowerView.swift */,
+				49F893FF2CD273F40036DC1E /* MowerVM.swift */,
+				49F893FD2CD273F40036DC1E /* MowerRepo.swift */,
+				49F8940A2CD39A380036DC1E /* MowerInteractor.swift */,
+				49F8940E2CD4116A0036DC1E /* MowerIntent.swift */,
+				49F893F72CD273F40036DC1E /* Preview Content */,
+				49F893F82CD273F40036DC1E /* Assets.xcassets */,
+				49F893FA2CD273F40036DC1E /* Mower.entitlements */,
+			);
+			path = Mower;
+			sourceTree = "<group>";
+		};
+		49F894462CD431C80036DC1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49F894482CD431C80036DC1E /* AppIntents.framework */,
+				49F894492CD431C80036DC1E /* Intents.framework */,
+				49F894472CD431C80036DC1E /* IntentsUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +167,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				49F893BE2CD220640036DC1E /* Mower */,
 			);
 			name = Mower;
 			packageProductDependencies = (
@@ -212,6 +270,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F894012CD273F40036DC1E /* Preview Assets.xcassets in Resources */,
+				49F894022CD273F40036DC1E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F894042CD273F40036DC1E /* MowerApp.swift in Sources */,
+				49F8940B2CD39A380036DC1E /* MowerInteractor.swift in Sources */,
+				49F894062CD273F40036DC1E /* MowerRepo.swift in Sources */,
+				49F8940F2CD4116A0036DC1E /* MowerIntent.swift in Sources */,
+				49F894072CD273F40036DC1E /* MowerView.swift in Sources */,
+				49F894082CD273F40036DC1E /* MowerVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +462,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mower/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Connect to Mowar";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Connect to Mowar";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -435,6 +504,9 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mower/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Connect to Mowar";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Connect to Mowar";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

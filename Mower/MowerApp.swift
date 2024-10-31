@@ -11,7 +11,7 @@ import SwiftUI
 struct MowerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MowerView()
         }
     }
 }
