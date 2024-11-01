@@ -22,10 +22,8 @@ class MowerVM: ObservableObject {
     // MARK: - Mower Control Methods
     
     func connectToMower() async {
-        
         let isConnected = await mowerInteractor.connect()
         mowerStatus = isConnected ? .connected : .disconnected
-        
     }
     
     func startMower() {

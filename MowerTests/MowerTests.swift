@@ -25,7 +25,6 @@ struct MowerTests {
         let mowerInteractor = MowerInteractorMock()
         let mowerVM = MowerVM(mowerInteractor: mowerInteractor)
         await mowerVM.connectToMower()
-        #expect(mowerVM.mowerStatus == .stopped)
+        #expect(mowerVM.mowerStatus == .connected)
     }
-
 }

@@ -18,6 +18,7 @@
 		49F8944A2CD431C80036DC1E /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F894472CD431C80036DC1E /* IntentsUI.framework */; };
 		49F8944B2CD431C80036DC1E /* AppIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F894482CD431C80036DC1E /* AppIntents.framework */; };
 		49F8944C2CD431C80036DC1E /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F894492CD431C80036DC1E /* Intents.framework */; };
+		49F8944E2CD452170036DC1E /* Screenshot 2024-11-01 at 00.56.50.png in Resources */ = {isa = PBXBuildFile; fileRef = 49F8944D2CD452160036DC1E /* Screenshot 2024-11-01 at 00.56.50.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		49F894472CD431C80036DC1E /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/IntentsUI.framework; sourceTree = DEVELOPER_DIR; };
 		49F894482CD431C80036DC1E /* AppIntents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppIntents.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/AppIntents.framework; sourceTree = DEVELOPER_DIR; };
 		49F894492CD431C80036DC1E /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Intents.framework; sourceTree = DEVELOPER_DIR; };
+		49F8944D2CD452160036DC1E /* Screenshot 2024-11-01 at 00.56.50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2024-11-01 at 00.56.50.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -139,6 +141,7 @@
 				49F893F72CD273F40036DC1E /* Preview Content */,
 				49F893F82CD273F40036DC1E /* Assets.xcassets */,
 				49F893FA2CD273F40036DC1E /* Mower.entitlements */,
+				49F8944D2CD452160036DC1E /* Screenshot 2024-11-01 at 00.56.50.png */,
 			);
 			path = Mower;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				49F894012CD273F40036DC1E /* Preview Assets.xcassets in Resources */,
 				49F894022CD273F40036DC1E /* Assets.xcassets in Resources */,
+				49F8944E2CD452170036DC1E /* Screenshot 2024-11-01 at 00.56.50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
