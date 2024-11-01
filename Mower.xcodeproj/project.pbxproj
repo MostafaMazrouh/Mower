@@ -19,6 +19,7 @@
 		49F8944B2CD431C80036DC1E /* AppIntents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F894482CD431C80036DC1E /* AppIntents.framework */; };
 		49F8944C2CD431C80036DC1E /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F894492CD431C80036DC1E /* Intents.framework */; };
 		49F8944E2CD452170036DC1E /* Screenshot 2024-11-01 at 00.56.50.png in Resources */ = {isa = PBXBuildFile; fileRef = 49F8944D2CD452160036DC1E /* Screenshot 2024-11-01 at 00.56.50.png */; };
+		49F894502CD467500036DC1E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 49F8944F2CD467500036DC1E /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		49F894482CD431C80036DC1E /* AppIntents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppIntents.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/AppIntents.framework; sourceTree = DEVELOPER_DIR; };
 		49F894492CD431C80036DC1E /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Intents.framework; sourceTree = DEVELOPER_DIR; };
 		49F8944D2CD452160036DC1E /* Screenshot 2024-11-01 at 00.56.50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2024-11-01 at 00.56.50.png"; sourceTree = "<group>"; };
+		49F8944F2CD467500036DC1E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -131,6 +133,7 @@
 		49F894002CD273F40036DC1E /* Mower */ = {
 			isa = PBXGroup;
 			children = (
+				49F8944F2CD467500036DC1E /* README.md */,
 				49F894092CD2765B0036DC1E /* Info.plist */,
 				49F893FB2CD273F40036DC1E /* MowerApp.swift */,
 				49F893FE2CD273F40036DC1E /* MowerView.swift */,
@@ -275,6 +278,7 @@
 			files = (
 				49F894012CD273F40036DC1E /* Preview Assets.xcassets in Resources */,
 				49F894022CD273F40036DC1E /* Assets.xcassets in Resources */,
+				49F894502CD467500036DC1E /* README.md in Resources */,
 				49F8944E2CD452170036DC1E /* Screenshot 2024-11-01 at 00.56.50.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
