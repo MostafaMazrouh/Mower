@@ -32,6 +32,13 @@ class MapVM: ObservableObject {
         activeFingers.removeAll { $0 == index }
     }
     
+    func reset() {
+        fingerPositions.removeAll()
+        activeFingers.removeAll()
+        rotationAngle = .zero
+        lastAngle = .zero
+    }
+    
     // Calculate the centroid of two active fingers
     var centroid: CGPoint? {
         guard activeFingers.count == 2,
@@ -40,6 +47,16 @@ class MapVM: ObservableObject {
             return nil
         }
         return CGPoint(x: (pos1.x + pos2.x) / 2, y: (pos1.y + pos2.y) / 2)
+    }
+    
+    /// Computes the rotation anchor based on the centroid
+    func anchorPoint(for centroid: CGPoint?, in geometry: GeometryProxy) -> UnitPoint {
+        guard let centroid = centroid else { return .center }
+        
+        return UnitPoint(
+            x: centroid.x / geometry.size.width,
+            y: centroid.y / geometry.size.height
+        )
     }
 }
 
@@ -55,21 +72,11 @@ struct MapView: View {
                 ZStack {
                     
                     // Map Image
-//                    Image(uiImage: mapImage)
-//                        .resizable()
-//                        .rotationEffect(mapVM.lastAngle + mapVM.rotationAngle,
-//                                        anchor: anchorPoint(for: mapVM.centroid, in: geometry))
-//                        .simultaneousGesture(
-//                            RotationGesture()
-//                                .onChanged { value in
-//                                    guard !value.radians.isNaN else { return }
-//                                    mapVM.rotationAngle = value
-//                                }
-//                                .onEnded { _ in
-//                                    mapVM.lastAngle += mapVM.rotationAngle
-//                                    mapVM.rotationAngle = .zero
-//                                }
-//                        )
+                    Image(uiImage: mapImage)
+                        .resizable()
+                        .rotationEffect(mapVM.lastAngle + mapVM.rotationAngle,
+                                        anchor: mapVM.anchorPoint(for: mapVM.centroid,
+                                                                  in: geometry))
                     
                     // Grid of areas
                     VStack(spacing: 1) {
@@ -82,32 +89,35 @@ struct MapView: View {
                             Area(index: 3, mapVM: mapVM)
                         }
                     }
+                    .simultaneousGesture(
+                        RotationGesture()
+                            .onChanged { value in
+                                guard !value.radians.isNaN else { return }
+                                mapVM.rotationAngle = value
+                            }
+                            .onEnded { _ in
+                                mapVM.lastAngle += mapVM.rotationAngle
+                                mapVM.rotationAngle = .zero
+                            }
+                    )
                     
                     // Centroid display
                     if let centroid = mapVM.centroid {
                         Circle()
-                            .fill(Color.green.opacity(0.8))
+                            .fill(Color.blue)
                             .frame(width: 20, height: 20)
                             .position(centroid)
                     }
                 }
                 .frame(width: 400, height: 400)
                 .background(Color.blue)
+                .padding()
             }
             .coordinateSpace(name: "MapGeometry")
         }
-    }
-    
-    /// Computes the rotation anchor based on the centroid
-    private func anchorPoint(for centroid: CGPoint?, in geometry: GeometryProxy) -> UnitPoint {
-        guard let centroid = centroid else { return .center }
-        
-        
-        
-        return UnitPoint(
-            x: centroid.x / geometry.size.width,
-            y: centroid.y / geometry.size.height
-        )
+        .onDisappear {
+            mapVM.reset()
+        }
     }
 }
 
