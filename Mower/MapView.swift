@@ -13,11 +13,13 @@ class MapVM: ObservableObject {
     var rotationAngle: Angle = .zero
     var lastAngle: Angle = .zero
     
-    private var fingerPositions: [Int: CGPoint] = [:]
+    private(set)var fingerGlobal: [Int: CGPoint] = [:]
+    private(set)var fingerLocal: [Int: CGPoint] = [:]
     private var activeFingers: [Int] = []
     
-    func updateFingerPosition(index: Int, position: CGPoint) {
-        fingerPositions[index] = position
+    func updateFingerPosition(index: Int, global: CGPoint, local: CGPoint) {
+        fingerGlobal[index] = global
+        fingerLocal[index] = local
         if !activeFingers.contains(index) {
             activeFingers.append(index)
             if activeFingers.count > 2 {
@@ -28,12 +30,13 @@ class MapVM: ObservableObject {
     
     // Clear finger position on drag end
     func clearFinger(index: Int) {
-        fingerPositions.removeValue(forKey: index)
+        fingerGlobal.removeValue(forKey: index)
+        fingerLocal.removeValue(forKey: index)
         activeFingers.removeAll { $0 == index }
     }
     
     func reset() {
-        fingerPositions.removeAll()
+        fingerGlobal.removeAll()
         activeFingers.removeAll()
         rotationAngle = .zero
         lastAngle = .zero
@@ -42,8 +45,8 @@ class MapVM: ObservableObject {
     // Calculate the centroid of two active fingers
     var centroid: CGPoint? {
         guard activeFingers.count == 2,
-              let pos1 = fingerPositions[activeFingers[0]],
-              let pos2 = fingerPositions[activeFingers[1]] else {
+              let pos1 = fingerGlobal[activeFingers[0]],
+              let pos2 = fingerGlobal[activeFingers[1]] else {
             return nil
         }
         return CGPoint(x: (pos1.x + pos2.x) / 2, y: (pos1.y + pos2.y) / 2)
@@ -66,7 +69,7 @@ struct MapView: View {
     
     var body: some View {
         VStack {
-            Text("Reset")
+            Spacer()
             
             GeometryReader { geometry in
                 ZStack {
@@ -105,15 +108,16 @@ struct MapView: View {
                     if let centroid = mapVM.centroid {
                         Circle()
                             .fill(Color.blue)
-                            .frame(width: 20, height: 20)
+                            .frame(width: 30, height: 30)
                             .position(centroid)
                     }
                 }
                 .frame(width: 400, height: 400)
-                .background(Color.blue)
-                .padding()
             }
             .coordinateSpace(name: "MapGeometry")
+            .frame(width: 400, height: 400)
+            
+            Spacer()
         }
         .onDisappear {
             mapVM.reset()
@@ -127,21 +131,35 @@ struct Area: View {
     
     var body: some View {
         GeometryReader { localGeometry in
-            Color.red
-                .cornerRadius(10)
-                .simultaneousGesture(
-                    DragGesture(minimumDistance: 0)
-                        .onChanged { value in
-                            let globalPosition = CGPoint(
-                                x: value.location.x + localGeometry.frame(in: .named("MapGeometry")).origin.x,
-                                y: value.location.y + localGeometry.frame(in: .named("MapGeometry")).origin.y
-                            )
-                            mapVM.updateFingerPosition(index: index, position: globalPosition)
-                        }
-                        .onEnded { _ in
-                            mapVM.clearFinger(index: index)
-                        }
-                )
+            ZStack {
+                Color.black.opacity(0.1)
+                    .cornerRadius(10)
+                    .simultaneousGesture(
+                        DragGesture(minimumDistance: 0)
+                            .onChanged { value in
+                                let globalPosition = CGPoint(
+                                    x: value.location.x + localGeometry.frame(in: .named("MapGeometry")).origin.x,
+                                    y: value.location.y + localGeometry.frame(in: .named("MapGeometry")).origin.y
+                                )
+                                mapVM.updateFingerPosition(index: index, global: globalPosition, local: value.location)
+                            }
+                            .onEnded { _ in
+                                mapVM.clearFinger(index: index)
+                            }
+                    )
+                
+                if let position = mapVM.fingerLocal[index] {
+                    Circle()
+                        .fill(Color.yellow)
+                        .frame(width: 30, height: 30)
+                        .position(position)
+                        .overlay(
+                            Text("\(index)")
+                                .foregroundColor(.white)
+                                .bold()
+                        )
+                }
+            }
         }
         .coordinateSpace(name: "AreaGeometry")
         .padding()

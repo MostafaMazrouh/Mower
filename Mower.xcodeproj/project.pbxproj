@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		495F92D82D319F9200FC624D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495F92D72D319F9200FC624D /* MapView.swift */; };
 		49F894012CD273F40036DC1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F893F62CD273F40036DC1E /* Preview Assets.xcassets */; };
 		49F894022CD273F40036DC1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F893F82CD273F40036DC1E /* Assets.xcassets */; };
 		49F894042CD273F40036DC1E /* MowerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F893FB2CD273F40036DC1E /* MowerApp.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		495F92D72D319F9200FC624D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		49F893BC2CD220640036DC1E /* Mower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F893CD2CD220650036DC1E /* MowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MowerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F893D72CD220650036DC1E /* MowerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MowerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 				49F894092CD2765B0036DC1E /* Info.plist */,
 				49F893FB2CD273F40036DC1E /* MowerApp.swift */,
 				49F893FE2CD273F40036DC1E /* MowerView.swift */,
+				495F92D72D319F9200FC624D /* MapView.swift */,
 				49F893FF2CD273F40036DC1E /* MowerVM.swift */,
 				49F893FD2CD273F40036DC1E /* MowerRepo.swift */,
 				49F8940A2CD39A380036DC1E /* MowerInteractor.swift */,
@@ -235,7 +238,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					49F893BB2CD220640036DC1E = {
 						CreatedOnToolsVersion = 16.0;
@@ -309,6 +312,7 @@
 				49F894062CD273F40036DC1E /* MowerRepo.swift in Sources */,
 				49F8940F2CD4116A0036DC1E /* MowerIntent.swift in Sources */,
 				49F894072CD273F40036DC1E /* MowerView.swift in Sources */,
+				495F92D82D319F9200FC624D /* MapView.swift in Sources */,
 				49F894082CD273F40036DC1E /* MowerVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +381,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -438,6 +443,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -465,6 +471,7 @@
 				CODE_SIGN_ENTITLEMENTS = Mower/Mower.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mower/Preview Content\"";
 				DEVELOPMENT_TEAM = 43UNBQF5Z9;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -507,6 +514,7 @@
 				CODE_SIGN_ENTITLEMENTS = Mower/Mower.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Mower/Preview Content\"";
 				DEVELOPMENT_TEAM = 43UNBQF5Z9;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -547,6 +555,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 43UNBQF5Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -570,6 +579,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 43UNBQF5Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -592,6 +602,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 43UNBQF5Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -614,6 +625,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 43UNBQF5Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
